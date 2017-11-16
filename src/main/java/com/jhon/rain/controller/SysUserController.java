@@ -2,6 +2,7 @@ package com.jhon.rain.controller;
 
 import com.jhon.rain.entity.SysUser;
 import com.jhon.rain.service.SysUserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sys/user")
+@Slf4j
 public class SysUserController {
 
 	@Autowired
@@ -30,6 +32,7 @@ public class SysUserController {
 	 */
 	@RequestMapping("/{id}")
 	public SysUser getRecordById(@PathVariable(name = "id",required = true) Integer id){
+		log.info("INFO Log Level,UserId={}",id);
 		return sysUserService.findById(id);
 	}
 }
