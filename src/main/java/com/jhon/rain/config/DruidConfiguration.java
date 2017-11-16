@@ -1,58 +1,3 @@
-#### 基于RBAC模式权限项目实战
-Spring Boot + MyBatis 
-
-##### 配置Druid的依赖
-```xml
-<dependency>
-    <groupId>com.alibaba</groupId>
-    <artifactId>druid</artifactId>
-    <version>1.0.20</version>
-</dependency>
-```
-##### Datasource数据源的扩展配置
-```yml
-spring:
-  datasource:
-    # mysql配置
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: root
-    url: jdbc:mysql://localhost/mybatis-template?characterEncoding=utf-8&useSSL=false
-
-    # Druid配置
-    type: com.alibaba.druid.pool.DruidDataSource
-    # 下面为连接池的补充设置，应用到上面所有数据源中
-    # 初始化大小，最小，最大
-    initialSize: 1
-    minIdle: 3
-    maxActive: 20
-    # 配置获取连接等待超时的时间
-    maxWait: 60000
-    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
-    timeBetweenEvictionRunsMillis: 60000
-    # 配置一个连接在池中最小生存的时间，单位是毫秒
-    minEvictableIdleTimeMillis: 30000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    # 打开PSCache，并且指定每个连接上PSCache的大小
-    poolPreparedStatements: true
-    maxPoolPreparedStatementPerConnectionSize: 20
-    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
-    filters: stat,wall,slf4j
-    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-    # 合并多个DruidDataSource的监控数据
-    useGlobalDataSourceStat: true
-
-mybatis:
-    type-aliases-package: com.jhon.rain.entity
-    mapper-locations: classpath:mapper/*.xml
-```
-
-##### 配置DruidConfiguration和SpringBoot集成
-```java
 package com.jhon.rain.config;
 
 import com.alibaba.druid.support.http.StatViewServlet;
@@ -129,11 +74,3 @@ public class DruidConfiguration {
 		return sqlSessionFactoryBean;
 	}
 }
-```
-
-##### 效果展示
-![登录页面](./photos/DruidLoginPage.png)
-
-![详细信息页面](./photos/DruidIndex.png)
-
-后续完善...
