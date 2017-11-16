@@ -10,8 +10,9 @@
 
         <!-- 1.数据库链接URL、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/immoc-rbac?characterEncoding=utf8" userId="root"
-                        password="root">
+                        connectionURL="jdbc:mysql://localhost:3306/immoc-rbac?characterEncoding=utf8"
+                        userId="root"
+                        password="">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
