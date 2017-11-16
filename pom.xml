@@ -94,6 +94,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+<!--
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
@@ -120,16 +121,17 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!--允许移动生成的文件 -->
+                    &lt;!&ndash;允许移动生成的文件 &ndash;&gt;
                     <verbose>true</verbose>
-                    <!-- 是否覆盖 -->
+                    &lt;!&ndash; 是否覆盖 &ndash;&gt;
                     <overwrite>true</overwrite>
-                    <!-- 自动生成的配置 -->
+                    &lt;!&ndash; 自动生成的配置 &ndash;&gt;
                     <configurationFile>
                         ${basedir}/src/main/resources/generator/mybatis-generator.xml
                     </configurationFile>
                 </configuration>
             </plugin>
+            -->
         </plugins>
         <finalName>rain-rbac</finalName>
     </build>
