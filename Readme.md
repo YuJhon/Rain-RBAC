@@ -1,4 +1,6 @@
 #### 基于RBAC模式权限项目实战
+[![Build Status](https://www.travis-ci.org/YuJhon/Rain-RBAC.svg?branch=master)](https://www.travis-ci.org/YuJhon/Rain-RBAC)
+
 Spring Boot + MyBatis 
 
 ##### 配置Druid的依赖
