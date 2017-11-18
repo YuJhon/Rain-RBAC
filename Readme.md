@@ -125,7 +125,7 @@ public class DruidConfiguration {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(dataSource);
 		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mapper/*.xml"));
+		sqlSessionFactoryBean.setMapperLocations(resolver.getResources(dao));
 		return sqlSessionFactoryBean;
 	}
 }

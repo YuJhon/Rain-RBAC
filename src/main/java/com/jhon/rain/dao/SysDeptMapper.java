@@ -1,4 +1,4 @@
-package com.jhon.rain.mapper;
+package com.jhon.rain.dao;
 
 import com.jhon.rain.entity.SysDept;
 

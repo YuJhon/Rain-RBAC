@@ -1,6 +1,10 @@
 package com.jhon.rain.service;
 
 import com.jhon.rain.entity.SysUser;
+import com.jhon.rain.pojo.dto.SysUserDTO;
+import com.jhon.rain.pojo.vo.SysUserVO;
+
+import java.util.List;
 
 /**
  * <p>功能描述</br> 系统用户业务接口定义 </p>
@@ -13,8 +17,24 @@ import com.jhon.rain.entity.SysUser;
 public interface SysUserService {
 	/**
 	 * <pre>通过主键查询记录</pre>
+	 *
 	 * @param id 主键
 	 * @return 对应的用户信息
 	 */
 	SysUser findById(Integer id);
+
+	/**
+	 * <pre>查询所有用户信息 </pre>
+	 *
+	 * @return
+	 */
+	List<SysUser> findAll();
+
+	/**
+	 * <pre>新增用户</pre>
+	 *
+	 * @param sysUserVO
+	 * @return
+	 */
+	SysUserVO save(SysUserVO sysUserVO);
 }

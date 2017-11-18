@@ -1,13 +1,17 @@
 package com.jhon.rain.controller;
 
 import com.jhon.rain.entity.SysUser;
+import com.jhon.rain.helper.ResponseData;
+import com.jhon.rain.helper.ResponseUtil;
+import com.jhon.rain.pojo.dto.SysUserDTO;
+import com.jhon.rain.pojo.vo.SysUserVO;
 import com.jhon.rain.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.xml.ws.Response;
+import java.util.List;
 
 /**
  * <p>功能描述</br> 用户控制器 </p>
@@ -27,12 +31,32 @@ public class SysUserController {
 
 	/**
 	 * <pre>查询用户信息</pre>
+	 *
 	 * @param id 用户主键
 	 * @return
 	 */
 	@RequestMapping("/{id}")
-	public SysUser getRecordById(@PathVariable(name = "id",required = true) Integer id){
-		log.info("INFO Log Level,UserId={}",id);
-		return sysUserService.findById(id);
+	public ResponseData<SysUser> getRecordById(@PathVariable(name = "id", required = true) Integer id) {
+		log.info("INFO Log Level,UserId={}", id);
+		return ResponseUtil.success(sysUserService.findById(id));
+	}
+
+	/**
+	 * <pre>查询所有的记录</pre>
+	 * @return
+	 */
+	@RequestMapping("/list")
+	public ResponseData<List<SysUser>> getRecords() {
+		return ResponseUtil.success(sysUserService.findAll());
+	}
+
+	/**
+	 * <pre>新增用户</pre>
+	 * @param sysUserVO
+	 * @return
+	 */
+	@PostMapping
+	public ResponseData<SysUserVO> save(@RequestBody SysUserVO sysUserVO){
+		return ResponseUtil.success(sysUserService.save(sysUserVO));
 	}
 }

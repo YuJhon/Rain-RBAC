@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jhon.rain.mapper.SysAclMapper">
+<mapper namespace="com.jhon.rain.dao.SysAclMapper">
   <resultMap id="BaseResultMap" type="com.jhon.rain.entity.SysAcl">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="code" jdbcType="VARCHAR" property="code" />

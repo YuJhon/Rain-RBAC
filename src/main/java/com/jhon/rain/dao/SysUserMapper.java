@@ -1,6 +1,8 @@
-package com.jhon.rain.mapper;
+package com.jhon.rain.dao;
 
 import com.jhon.rain.entity.SysUser;
+
+import java.util.List;
 
 /**
  * <p>功能描述</br> </p>
@@ -23,4 +25,6 @@ public interface SysUserMapper {
 	int updateByPrimaryKeySelective(SysUser record);
 
 	int updateByPrimaryKey(SysUser record);
+
+	List<SysUser> findAll();
 }
