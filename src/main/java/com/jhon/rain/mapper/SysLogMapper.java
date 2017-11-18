@@ -3,18 +3,27 @@ package com.jhon.rain.mapper;
 import com.jhon.rain.entity.SysLog;
 import com.jhon.rain.entity.SysLogWithBLOBs;
 
+/**
+ * <p>功能描述</br> </p>
+ *
+ * @author jiangy19
+ * @version v1.0
+ * @FileName SysLogMapper
+ * @date 2017/11/18 9:09
+ */
 public interface SysLogMapper {
-    int deleteByPrimaryKey(Integer id);
 
-    int insert(SysLogWithBLOBs record);
+	int deleteByPrimaryKey(Integer id);
 
-    int insertSelective(SysLogWithBLOBs record);
+	int insert(SysLogWithBLOBs record);
 
-    SysLogWithBLOBs selectByPrimaryKey(Integer id);
+	int insertSelective(SysLogWithBLOBs record);
 
-    int updateByPrimaryKeySelective(SysLogWithBLOBs record);
+	SysLogWithBLOBs selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeyWithBLOBs(SysLogWithBLOBs record);
+	int updateByPrimaryKeySelective(SysLogWithBLOBs record);
 
-    int updateByPrimaryKey(SysLog record);
+	int updateByPrimaryKeyWithBLOBs(SysLogWithBLOBs record);
+
+	int updateByPrimaryKey(SysLog record);
 }

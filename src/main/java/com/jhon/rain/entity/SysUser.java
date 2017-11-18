@@ -2,114 +2,157 @@ package com.jhon.rain.entity;
 
 import java.util.Date;
 
+
+/**
+ * <p>功能描述</br>用户实体</p>
+ *
+ * @author jiangy19
+ * @version v1.0
+ * @FileName SysUser
+ * @date 2017/11/18 9:09
+ */
 public class SysUser {
-    private Integer id;
 
-    private String username;
+	/**
+	 * 用户id
+	 */
+	private Integer id;
 
-    private String telephone;
+	/**
+	 * 用户名称
+	 */
+	private String username;
 
-    private String mail;
+	/**
+	 * 手机号
+	 */
+	private String telephone;
 
-    private String password;
+	/**
+	 * 邮箱
+	 */
+	private String mail;
 
-    private Integer deptId;
+	/**
+	 * 加密后的密码
+	 */
+	private String password;
 
-    private Integer status;
+	/**
+	 * 用户所在部门的id
+	 */
+	private Integer deptId;
 
-    private String remark;
+	/**
+	 * 状态，1：正常，0：冻结状态，2：删除
+	 */
+	private Integer status;
 
-    private String operator;
+	/**
+	 * 备注
+	 */
+	private String remark;
 
-    private Date operateTime;
+	/**
+	 * 操作者
+	 */
+	private String operator;
 
-    private String operateIp;
+	/**
+	 * 最后一次更新时间
+	 */
+	private Date operateTime;
 
-    public Integer getId() {
-        return id;
-    }
+	/**
+	 * 最后一次更新者的ip地址
+	 */
+	private String operateIp;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public String getTelephone() {
-        return telephone;
-    }
+	public void setUsername(String username) {
+		this.username = username == null ? null : username.trim();
+	}
 
-    public void setTelephone(String telephone) {
-        this.telephone = telephone == null ? null : telephone.trim();
-    }
+	public String getTelephone() {
+		return telephone;
+	}
 
-    public String getMail() {
-        return mail;
-    }
+	public void setTelephone(String telephone) {
+		this.telephone = telephone == null ? null : telephone.trim();
+	}
 
-    public void setMail(String mail) {
-        this.mail = mail == null ? null : mail.trim();
-    }
+	public String getMail() {
+		return mail;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setMail(String mail) {
+		this.mail = mail == null ? null : mail.trim();
+	}
 
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public Integer getDeptId() {
-        return deptId;
-    }
+	public void setPassword(String password) {
+		this.password = password == null ? null : password.trim();
+	}
 
-    public void setDeptId(Integer deptId) {
-        this.deptId = deptId;
-    }
+	public Integer getDeptId() {
+		return deptId;
+	}
 
-    public Integer getStatus() {
-        return status;
-    }
+	public void setDeptId(Integer deptId) {
+		this.deptId = deptId;
+	}
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+	public Integer getStatus() {
+		return status;
+	}
 
-    public String getRemark() {
-        return remark;
-    }
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
 
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
+	public String getRemark() {
+		return remark;
+	}
 
-    public String getOperator() {
-        return operator;
-    }
+	public void setRemark(String remark) {
+		this.remark = remark == null ? null : remark.trim();
+	}
 
-    public void setOperator(String operator) {
-        this.operator = operator == null ? null : operator.trim();
-    }
+	public String getOperator() {
+		return operator;
+	}
 
-    public Date getOperateTime() {
-        return operateTime;
-    }
+	public void setOperator(String operator) {
+		this.operator = operator == null ? null : operator.trim();
+	}
 
-    public void setOperateTime(Date operateTime) {
-        this.operateTime = operateTime;
-    }
+	public Date getOperateTime() {
+		return operateTime;
+	}
 
-    public String getOperateIp() {
-        return operateIp;
-    }
+	public void setOperateTime(Date operateTime) {
+		this.operateTime = operateTime;
+	}
 
-    public void setOperateIp(String operateIp) {
-        this.operateIp = operateIp == null ? null : operateIp.trim();
-    }
+	public String getOperateIp() {
+		return operateIp;
+	}
+
+	public void setOperateIp(String operateIp) {
+		this.operateIp = operateIp == null ? null : operateIp.trim();
+	}
 }

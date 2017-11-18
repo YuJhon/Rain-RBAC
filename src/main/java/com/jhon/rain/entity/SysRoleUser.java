@@ -2,64 +2,91 @@ package com.jhon.rain.entity;
 
 import java.util.Date;
 
+/**
+ * <p>功能描述</br>角色和用户的关联关系</p>
+ *
+ * @author jiangy19
+ * @version v1.0
+ * @FileName SysRoleUser
+ * @date 2017/11/18 9:09
+ */
 public class SysRoleUser {
-    private Integer id;
 
-    private Integer roleId;
+	/**
+	 * 主键id
+	 */
+	private Integer id;
 
-    private Integer userId;
+	/**
+	 * 角色id
+	 */
+	private Integer roleId;
 
-    private String operator;
+	/**
+	 * 用户Id
+	 */
+	private Integer userId;
 
-    private Date operateTime;
+	/**
+	 * 操作者
+	 */
+	private String operator;
 
-    private String operateIp;
+	/**
+	 * 最后一次更新的时间
+	 */
+	private Date operateTime;
 
-    public Integer getId() {
-        return id;
-    }
+	/**
+	 * 最后一次更新者的ip地址
+	 */
+	private String operateIp;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public Integer getRoleId() {
-        return roleId;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
-    }
+	public Integer getRoleId() {
+		return roleId;
+	}
 
-    public Integer getUserId() {
-        return userId;
-    }
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	public Integer getUserId() {
+		return userId;
+	}
 
-    public String getOperator() {
-        return operator;
-    }
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
-    public void setOperator(String operator) {
-        this.operator = operator == null ? null : operator.trim();
-    }
+	public String getOperator() {
+		return operator;
+	}
 
-    public Date getOperateTime() {
-        return operateTime;
-    }
+	public void setOperator(String operator) {
+		this.operator = operator == null ? null : operator.trim();
+	}
 
-    public void setOperateTime(Date operateTime) {
-        this.operateTime = operateTime;
-    }
+	public Date getOperateTime() {
+		return operateTime;
+	}
 
-    public String getOperateIp() {
-        return operateIp;
-    }
+	public void setOperateTime(Date operateTime) {
+		this.operateTime = operateTime;
+	}
 
-    public void setOperateIp(String operateIp) {
-        this.operateIp = operateIp == null ? null : operateIp.trim();
-    }
+	public String getOperateIp() {
+		return operateIp;
+	}
+
+	public void setOperateIp(String operateIp) {
+		this.operateIp = operateIp == null ? null : operateIp.trim();
+	}
 }

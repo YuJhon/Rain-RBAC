@@ -2,104 +2,143 @@ package com.jhon.rain.entity;
 
 import java.util.Date;
 
+/**
+ * <p>功能描述</br>权限模块表 </p>
+ *
+ * @author jiangy19
+ * @version v1.0
+ * @FileName SysAclModule
+ * @date 2017/11/18 9:09
+ */
 public class SysAclModule {
-    private Integer id;
 
-    private String name;
+	/**
+	 * 权限模块id
+	 */
+	private Integer id;
 
-    private Integer parentId;
+	/**
+	 * 权限模块名称
+	 */
+	private String name;
 
-    private String level;
+	/**
+	 * 上级权限模块id
+	 */
+	private Integer parentId;
 
-    private Integer seq;
+	/**
+	 * 权限模块层级
+	 */
+	private String level;
 
-    private Integer status;
+	/**
+	 * 权限模块在当前层级下的顺序，由小到大
+	 */
+	private Integer seq;
 
-    private String remark;
+	/**
+	 * 状态，1：正常，0：冻结
+	 */
+	private Integer status;
 
-    private String operator;
+	/**
+	 * 备注
+	 */
+	private String remark;
 
-    private Date operateTime;
+	/**
+	 * 操作者
+	 */
+	private String operator;
 
-    private String operateIp;
+	/**
+	 * 最后一次操作时间
+	 */
+	private Date operateTime;
 
-    public Integer getId() {
-        return id;
-    }
+	/**
+	 * 最后一次更新操作者的ip地址
+	 */
+	private String operateIp;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
+	public String getName() {
+		return name;
+	}
 
-    public Integer getParentId() {
-        return parentId;
-    }
+	public void setName(String name) {
+		this.name = name == null ? null : name.trim();
+	}
 
-    public void setParentId(Integer parentId) {
-        this.parentId = parentId;
-    }
+	public Integer getParentId() {
+		return parentId;
+	}
 
-    public String getLevel() {
-        return level;
-    }
+	public void setParentId(Integer parentId) {
+		this.parentId = parentId;
+	}
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
-    }
+	public String getLevel() {
+		return level;
+	}
 
-    public Integer getSeq() {
-        return seq;
-    }
+	public void setLevel(String level) {
+		this.level = level == null ? null : level.trim();
+	}
 
-    public void setSeq(Integer seq) {
-        this.seq = seq;
-    }
+	public Integer getSeq() {
+		return seq;
+	}
 
-    public Integer getStatus() {
-        return status;
-    }
+	public void setSeq(Integer seq) {
+		this.seq = seq;
+	}
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+	public Integer getStatus() {
+		return status;
+	}
 
-    public String getRemark() {
-        return remark;
-    }
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
 
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
+	public String getRemark() {
+		return remark;
+	}
 
-    public String getOperator() {
-        return operator;
-    }
+	public void setRemark(String remark) {
+		this.remark = remark == null ? null : remark.trim();
+	}
 
-    public void setOperator(String operator) {
-        this.operator = operator == null ? null : operator.trim();
-    }
+	public String getOperator() {
+		return operator;
+	}
 
-    public Date getOperateTime() {
-        return operateTime;
-    }
+	public void setOperator(String operator) {
+		this.operator = operator == null ? null : operator.trim();
+	}
 
-    public void setOperateTime(Date operateTime) {
-        this.operateTime = operateTime;
-    }
+	public Date getOperateTime() {
+		return operateTime;
+	}
 
-    public String getOperateIp() {
-        return operateIp;
-    }
+	public void setOperateTime(Date operateTime) {
+		this.operateTime = operateTime;
+	}
 
-    public void setOperateIp(String operateIp) {
-        this.operateIp = operateIp == null ? null : operateIp.trim();
-    }
+	public String getOperateIp() {
+		return operateIp;
+	}
+
+	public void setOperateIp(String operateIp) {
+		this.operateIp = operateIp == null ? null : operateIp.trim();
+	}
 }

@@ -2,84 +2,117 @@ package com.jhon.rain.entity;
 
 import java.util.Date;
 
+/**
+ * <p>功能描述</br>角色表</p>
+ *
+ * @author jiangy19
+ * @version v1.0
+ * @FileName SysRole
+ * @date 2017/11/18 9:09
+ */
 public class SysRole {
-    private Integer id;
 
-    private String name;
+	/**
+	 * 角色id
+	 */
+	private Integer id;
 
-    private Integer type;
+	/**
+	 * 角色名称
+	 */
+	private String name;
 
-    private Integer status;
+	/**
+	 * 角色的类型，1：管理员角色，2：其他
+	 */
+	private Integer type;
 
-    private String remark;
+	/**
+	 * 状态，1：可用，0：冻结
+	 */
+	private Integer status;
 
-    private String operator;
+	/**
+	 * 备注
+	 */
+	private String remark;
 
-    private Date operateTime;
+	/**
+	 * 操作者
+	 */
+	private String operator;
 
-    private String operateIp;
+	/**
+	 * 最后一次更新的时间
+	 */
+	private Date operateTime;
 
-    public Integer getId() {
-        return id;
-    }
+	/**
+	 * 最后一次更新者的ip地址
+	 */
+	private String operateIp;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
+	public String getName() {
+		return name;
+	}
 
-    public Integer getType() {
-        return type;
-    }
+	public void setName(String name) {
+		this.name = name == null ? null : name.trim();
+	}
 
-    public void setType(Integer type) {
-        this.type = type;
-    }
+	public Integer getType() {
+		return type;
+	}
 
-    public Integer getStatus() {
-        return status;
-    }
+	public void setType(Integer type) {
+		this.type = type;
+	}
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+	public Integer getStatus() {
+		return status;
+	}
 
-    public String getRemark() {
-        return remark;
-    }
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
 
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
+	public String getRemark() {
+		return remark;
+	}
 
-    public String getOperator() {
-        return operator;
-    }
+	public void setRemark(String remark) {
+		this.remark = remark == null ? null : remark.trim();
+	}
 
-    public void setOperator(String operator) {
-        this.operator = operator == null ? null : operator.trim();
-    }
+	public String getOperator() {
+		return operator;
+	}
 
-    public Date getOperateTime() {
-        return operateTime;
-    }
+	public void setOperator(String operator) {
+		this.operator = operator == null ? null : operator.trim();
+	}
 
-    public void setOperateTime(Date operateTime) {
-        this.operateTime = operateTime;
-    }
+	public Date getOperateTime() {
+		return operateTime;
+	}
 
-    public String getOperateIp() {
-        return operateIp;
-    }
+	public void setOperateTime(Date operateTime) {
+		this.operateTime = operateTime;
+	}
 
-    public void setOperateIp(String operateIp) {
-        this.operateIp = operateIp == null ? null : operateIp.trim();
-    }
+	public String getOperateIp() {
+		return operateIp;
+	}
+
+	public void setOperateIp(String operateIp) {
+		this.operateIp = operateIp == null ? null : operateIp.trim();
+	}
 }

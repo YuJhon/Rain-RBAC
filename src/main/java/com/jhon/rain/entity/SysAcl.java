@@ -2,124 +2,169 @@ package com.jhon.rain.entity;
 
 import java.util.Date;
 
+/**
+ * <p>功能描述</br>权限表实体 </p>
+ *
+ * @author jiangy19
+ * @version v1.0
+ * @FileName SysAcl
+ * @date 2017/11/18 9:09
+ */
 public class SysAcl {
-    private Integer id;
 
-    private String code;
+	/**
+	 * 权限id
+	 */
+	private Integer id;
 
-    private String name;
+	/**
+	 * 权限码
+	 */
+	private String code;
 
-    private Integer aclModuleId;
+	/**
+	 * 权限名称
+	 */
+	private String name;
 
-    private String url;
+	/**
+	 * 权限所在的权限模块id
+	 */
+	private Integer aclModuleId;
 
-    private Integer type;
+	/**
+	 * 请求的url, 可以填正则表达式
+	 */
+	private String url;
 
-    private Integer status;
+	/**
+	 * 类型，1：菜单，2：按钮，3：其他
+	 */
+	private Integer type;
 
-    private Integer seq;
+	/**
+	 * 状态，1：正常，0：冻结
+	 */
+	private Integer status;
 
-    private String remark;
+	/**
+	 * 权限在当前模块下的顺序，由小到大
+	 */
+	private Integer seq;
 
-    private String operator;
+	/**
+	 * 备注
+	 */
+	private String remark;
 
-    private Date operateTime;
+	/**
+	 * 操作者
+	 */
+	private String operator;
 
-    private String operateIp;
+	/**
+	 * 最后一次更新时间
+	 */
+	private Date operateTime;
 
-    public Integer getId() {
-        return id;
-    }
+	/**
+	 * 最后一个更新者的ip地址
+	 */
+	private String operateIp;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getCode() {
-        return code;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setCode(String code) {
-        this.code = code == null ? null : code.trim();
-    }
+	public String getCode() {
+		return code;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setCode(String code) {
+		this.code = code == null ? null : code.trim();
+	}
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
+	public String getName() {
+		return name;
+	}
 
-    public Integer getAclModuleId() {
-        return aclModuleId;
-    }
+	public void setName(String name) {
+		this.name = name == null ? null : name.trim();
+	}
 
-    public void setAclModuleId(Integer aclModuleId) {
-        this.aclModuleId = aclModuleId;
-    }
+	public Integer getAclModuleId() {
+		return aclModuleId;
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public void setAclModuleId(Integer aclModuleId) {
+		this.aclModuleId = aclModuleId;
+	}
 
-    public void setUrl(String url) {
-        this.url = url == null ? null : url.trim();
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public Integer getType() {
-        return type;
-    }
+	public void setUrl(String url) {
+		this.url = url == null ? null : url.trim();
+	}
 
-    public void setType(Integer type) {
-        this.type = type;
-    }
+	public Integer getType() {
+		return type;
+	}
 
-    public Integer getStatus() {
-        return status;
-    }
+	public void setType(Integer type) {
+		this.type = type;
+	}
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+	public Integer getStatus() {
+		return status;
+	}
 
-    public Integer getSeq() {
-        return seq;
-    }
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
 
-    public void setSeq(Integer seq) {
-        this.seq = seq;
-    }
+	public Integer getSeq() {
+		return seq;
+	}
 
-    public String getRemark() {
-        return remark;
-    }
+	public void setSeq(Integer seq) {
+		this.seq = seq;
+	}
 
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
+	public String getRemark() {
+		return remark;
+	}
 
-    public String getOperator() {
-        return operator;
-    }
+	public void setRemark(String remark) {
+		this.remark = remark == null ? null : remark.trim();
+	}
 
-    public void setOperator(String operator) {
-        this.operator = operator == null ? null : operator.trim();
-    }
+	public String getOperator() {
+		return operator;
+	}
 
-    public Date getOperateTime() {
-        return operateTime;
-    }
+	public void setOperator(String operator) {
+		this.operator = operator == null ? null : operator.trim();
+	}
 
-    public void setOperateTime(Date operateTime) {
-        this.operateTime = operateTime;
-    }
+	public Date getOperateTime() {
+		return operateTime;
+	}
 
-    public String getOperateIp() {
-        return operateIp;
-    }
+	public void setOperateTime(Date operateTime) {
+		this.operateTime = operateTime;
+	}
 
-    public void setOperateIp(String operateIp) {
-        this.operateIp = operateIp == null ? null : operateIp.trim();
-    }
+	public String getOperateIp() {
+		return operateIp;
+	}
+
+	public void setOperateIp(String operateIp) {
+		this.operateIp = operateIp == null ? null : operateIp.trim();
+	}
 }
