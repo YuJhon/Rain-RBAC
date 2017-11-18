@@ -16,6 +16,7 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 public class SysDeptVO {
+
 	private Integer id;
 
 	@NotBlank(message = "部门名称不可以为空")

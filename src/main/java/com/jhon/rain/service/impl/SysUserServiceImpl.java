@@ -42,7 +42,7 @@ public class SysUserServiceImpl implements SysUserService {
 
 	@Override
 	public SysUserVO save(SysUserVO sysUserVO) {
-		CustomBeanValidator.check(sysUserVO);
+		//CustomBeanValidator.check(sysUserVO);
 		SysUser sysUser = new SysUser();
 		BeanUtils.copyProperties(sysUserVO, sysUser);
 		int record = sysUserMapper.insert(sysUser);
