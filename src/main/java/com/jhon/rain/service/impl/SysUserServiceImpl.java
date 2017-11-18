@@ -3,7 +3,6 @@ package com.jhon.rain.service.impl;
 import com.jhon.rain.entity.SysUser;
 import com.jhon.rain.dao.SysUserMapper;
 import com.jhon.rain.helper.CustomBeanValidator;
-import com.jhon.rain.pojo.dto.SysUserDTO;
 import com.jhon.rain.pojo.vo.SysUserVO;
 import com.jhon.rain.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;

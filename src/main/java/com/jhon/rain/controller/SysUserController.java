@@ -3,14 +3,12 @@ package com.jhon.rain.controller;
 import com.jhon.rain.entity.SysUser;
 import com.jhon.rain.helper.ResponseData;
 import com.jhon.rain.helper.ResponseUtil;
-import com.jhon.rain.pojo.dto.SysUserDTO;
 import com.jhon.rain.pojo.vo.SysUserVO;
 import com.jhon.rain.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
 import java.util.List;
 
 /**

@@ -1,7 +1,6 @@
 package com.jhon.rain.service;
 
 import com.jhon.rain.entity.SysUser;
-import com.jhon.rain.pojo.dto.SysUserDTO;
 import com.jhon.rain.pojo.vo.SysUserVO;
 
 import java.util.List;
