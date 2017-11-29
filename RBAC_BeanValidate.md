@@ -112,7 +112,7 @@ public class CustomBeanValidator {
 package com.jhon.rain.base;
 
 import com.jhon.rain.constants.RespCodeConstants;
-import com.jhon.rain.helper.RbacParamException;
+import com.jhon.rain.exception.RbacException;
 import com.jhon.rain.helper.ResponseData;
 import com.jhon.rain.helper.ResponseUtil;
 import org.springframework.web.bind.annotation.ControllerAdvice;

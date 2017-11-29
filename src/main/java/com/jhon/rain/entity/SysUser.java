@@ -1,5 +1,10 @@
 package com.jhon.rain.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.util.Date;
 
 
@@ -11,6 +16,10 @@ import java.util.Date;
  * @FileName SysUser
  * @date 2017/11/18 9:09
  */
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class SysUser {
 
 	/**

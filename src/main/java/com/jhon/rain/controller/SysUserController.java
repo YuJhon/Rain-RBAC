@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -44,7 +45,14 @@ public class SysUserController {
 	 * @return
 	 */
 	@RequestMapping("/list")
-	public ResponseData<List<SysUser>> getRecords() {
+	public ResponseData<List<SysUser>> getRecords(HttpServletRequest request) {
+		log.info("RequestURI:{}",request.getRequestURI());
+		log.info("Method:{}",request.getMethod());
+		log.info("RequestURL:{}",request.getRequestURL());
+		log.info("RemoteAddr:{}",request.getRemoteAddr());
+		log.info("RemoteHost:{}",request.getRemoteHost());
+		log.info("ContentType:{}",request.getContentType());
+		log.info("CharacterEncoding:{}",request.getCharacterEncoding());
 		return ResponseUtil.success(sysUserService.findAll());
 	}
 

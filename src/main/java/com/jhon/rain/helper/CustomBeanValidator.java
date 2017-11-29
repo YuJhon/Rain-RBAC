@@ -3,6 +3,7 @@ package com.jhon.rain.helper;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.jhon.rain.exception.RbacException;
 import org.apache.commons.collections.MapUtils;
 
 import javax.validation.ConstraintViolation;
@@ -92,7 +93,7 @@ public class CustomBeanValidator {
 	public static void check(Object param) {
 		Map<String, String> map = CustomBeanValidator.validateObject(param);
 		if (MapUtils.isNotEmpty(map)) {
-			throw new RbacParamException(map.toString());
+			throw new RbacException(map.toString());
 		}
 	}
 }
